@@ -1,25 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+// file name = app.js
+import { sub } from './math.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+console.log(sub(23, 14));
+// file name = math.js
+export function sub(a, b) {
+  return a - b;
 }
-
-export default App;
