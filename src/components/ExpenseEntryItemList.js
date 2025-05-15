@@ -1,9 +1,30 @@
 import React from 'react';
-import './ExpenseEntryItemList.css'
+import '../styles/ExpenseEntryItemList.css'
 
-class ExpenseEntryItemList1 extends React.Component {
+class ExpenseEntryItemList extends React.Component {
    constructor(props) {
       super(props);
+   }
+   componentDidMount() {
+      console.log("ExpenseEntryItemList :: Initialize :: componentDidMount :: Component mounted");
+   }
+   shouldComponentUpdate(nextProps, nextState) {
+      console.log("ExpenseEntryItemList :: Update :: shouldComponentUpdate invoked :: Before update");
+      return true;
+   }
+   static getDerivedStateFromProps(props, state) {
+      console.log("ExpenseEntryItemList :: Initialize / Update :: getDerivedStateFromProps :: Before update");
+      return null;
+   }
+   getSnapshotBeforeUpdate(prevProps, prevState) {
+      console.log("ExpenseEntryItemList :: Update :: getSnapshotBeforeUpdate :: Before update");
+      return null;
+   }
+   componentDidUpdate(prevProps, prevState, snapshot) {
+      console.log("ExpenseEntryItemList :: Update :: componentDidUpdate :: Component updated");
+   }
+   componentWillUnmount() {
+      console.log("ExpenseEntryItemList :: Remove :: componentWillUnmount :: Component unmounted");
    }
    render() {
       const lists = this.props.items.map( (item) => 
@@ -31,4 +52,4 @@ class ExpenseEntryItemList1 extends React.Component {
       );
    }
 }
-export default ExpenseEntryItemList1;
+export default ExpenseEntryItemList;

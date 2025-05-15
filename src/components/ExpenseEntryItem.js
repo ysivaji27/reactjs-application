@@ -1,5 +1,5 @@
 import React from 'react';
-import './ExpenseEntryItem.css';
+import '../styles/ExpenseEntryItem.css';
 
 import FormattedMoney from './FormattedMoney' 
 import FormattedDate from './FormattedDate'
